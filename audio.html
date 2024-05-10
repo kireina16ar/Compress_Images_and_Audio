@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="pictune.svg">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>PicTune</title>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">PicTune<span>.</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item ">
+						<a class="nav-link" href="index.html">Back</a>
+					</li>
+				</ul>
+			</div>
+		</div>			
+	</nav>
+	<!-- End Header/Navigation -->
+
+    <!-- Start Audio Upload Section -->
+    <div class="row">
+        <div class="wrapper">
+            <div class="container">
+                <div class="upload-container">
+                    <div class="border-container">
+                        <input type="file" id="audioInput" class="upload-input" style="display: none;">
+                        <label for="audioInput">
+                            <h1>Upload an audio file</h1>
+                            <div class="icons fa-4x">
+                                <i class="fas fa-file-audio"></i>
+                            </div>
+                            <p>Drag and drop files here, or browse your computer.</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Audio Upload Section -->
+
+
+<!-- Start Compression Options -->
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div id="compressionOptions">
+                <div id="resizeForm">
+                    <!-- Placeholder for File Name Display -->
+                    <div id="fileNameDisplay"></div>
+                    <!-- Preview audio -->
+                    <div class="audio-preview">
+                        <audio src="" id="previewAudio" controls style="max-width: 100%;"></audio>
+                    </div>
+                    <div class="additional-buttons d-flex justify-content-center flex-wrap">
+                        <button id="compressButton" class="btn btn-secondary mb-4">Compress</button>
+                        <button onclick="reloadPage()" class="btn btn-secondary mb-4">Reload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Compression Options -->
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/audio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="pictune.svg">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>PicTune</title>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">PicTune<span>.</span></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item ">
+						<a class="nav-link" href="index.html">Back</a>
+					</li>
+				</ul>
+			</div>
+		</div>			
+	</nav>
+	<!-- End Header/Navigation -->
+
+        
+	<!-- Start Hero Section -->
+    <div class="row">
+        <div class="wrapper">
+            <div class="container">
+                <div class="upload-container">
+                    <div class="border-container" >
+                        <input type="file" id="fileInput" class="upload-input" style="display: none;">
+                            <label for="fileInput">
+                                <h1>Upload an Image</h1>
+                                <div class="icons fa-4x">
+                                <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+                                </div>
+                                <p>Drag and drop files here, or browse your computer.</p>
+                            </label>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!-- End Hero Section -->
+    <!-- Gambar akan muncul di sini -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <!-- End Gambar -->
+    
+    <!-- Start Form resize -->
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div id="resizeForm">
+                    <div class="d-flex justify-content-between mt-2 text-center">
+                        <div class="col">
+                            <label for="width">Width:</label>
+                            <input type="number" id="width" name="width" value="200">
+                        </div>
+                        <div class="col">
+                            <label for="height">Height:</label>
+                            <input type="number" id="height" name="height" value="200">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-2">
+                        <input type="checkbox" id="lockAspectRatio">
+                        <label for="lockAspectRatio">Lock Aspect Ratio</label>
+                    </div>
+                    <div class="additional-buttons d-flex justify-content-center flex-wrap">
+                        <button onclick="resizeImage()" class="btn btn-secondary mb-4">Resize</button>
+                        <button onclick="blurImage()" class="btn btn-secondary mb-4">Blur</button>
+                        <button onclick="rotateImage()" class="btn btn-secondary mb-4">Rotate</button>
+                        <select class="filter-select btn btn-secondary mb-4 d-flex justify-content-center flex-wrap">
+                            <option value="none">No Filter</option>
+                            <option value="grayscale">Grayscale</option>
+                            <option value="sepia">Sepia</option>
+                            <option value="invert">Invert</option>
+                        </select>
+                    </div>
+                    <div class="download-button">
+                        <button onclick="dowloadImage()" class="btn btn-secondary mb-2"download>Download Image</button>
+                        <button onclick="reloadPage()" class="btn btn-secondary mb-2">Reload</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Form resize -->
+
+
+
+           
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/tiny-slider.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+</html>
